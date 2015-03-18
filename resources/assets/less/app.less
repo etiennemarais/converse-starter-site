@@ -1,0 +1,235 @@
+@import "vendor/bootstrap/bootstrap";
+@import "animations";
+@import "mixins";
+
+// Application colours
+@seashell:              #f0f0f0;
+@cinnabar:              #e74c3c;
+@punch:                 #db4a39;
+@menubar:               #E76D4D;
+@menubar-border:        #F17858;
+@left-attention:        #1C2429;
+@gold-tips:             #f1c40f;
+@mountain-meadow:       #1abc9c;
+@mountain-green:        #24a85c;
+@cape-cod:              #575959;
+@heading:               #3B4141;
+@cerulean:              #00acee;
+@venice-blue:           #0e76a8;
+@oslo-gray:             #7d7f80;
+@lily-white:            #fcfeff;
+@curious-blue:          #3498db;
+@iron:                  #d3d4d5;
+@gray-chateau-1:        #a2a4a6;
+@gray-chateau:          #b1b2b3;
+@rolling-stone:         #7e7f80;
+@athens-gray:           #e3e4e6;
+@athens-gray-2:         #afaea7;
+@chambray:              #3b5998;
+@chambray-light:        #3D7EBF;
+@wisteria:              #9b59b6;
+@french-gray:           #B1B1B3;
+@black:                 #3f3f40;
+@page-gray:             #f5f5f5;
+@footer-color:          #37424C;
+@darkBlue:              #304b5c;
+@blue:                  #3497db;
+@red:                   #e25a44;
+@green:                 #3bb19c;
+@orange:                #e47936;
+@yellow:                #f0c93e;
+@white:                 #f2f4f5;
+@gray:                  #cdcecf;
+
+@import "vendor/fonts/fonts";
+@import "utilities";
+
+body {
+    background-color: @white;
+}
+
+section {
+    &#intro {
+        padding-top: 100px;
+        width: 100%;
+        padding-bottom: 40px;
+        float: left;
+        background:url("../images/coverImage.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-clip: border-box;
+        background-origin: padding-box;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .logo {
+            display: block;
+            margin: 20px auto;
+
+            svg {
+                .opacity(0.95);
+                fill: @red;
+
+                path {
+                    fill: @red;
+                }
+            }
+        }
+
+        .learn-more-container {
+            display: block;
+            margin: 70px auto 10px;
+
+            button {
+                &.learn-more {
+                    color: @red;
+                    background-color: transparent;
+                    border: 2px solid @red;
+
+                    &:hover,
+                    &:focus {
+                        background-color: @red;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    &#description_what {
+        padding-top: 45px;
+        width: 100%;
+        padding-bottom: 55px;
+        float: left;
+        font-size: 16px;
+
+        h1 {
+            font-weight: 300;
+            font-size: @font-size-h1 * 1.26;
+            margin-bottom: 50px;
+        }
+    }
+
+    &#description_how {
+        padding-top: 45px;
+        width: 100%;
+        padding-bottom: 100px;
+        float: left;
+        font-size: 16px;
+        background-color: @darkBlue;
+
+        .icon-image {
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            color: @white;
+            font-size: @font-size-h1 * 1.26;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-weight: 300;
+            color: @white;
+            font-size: @font-size-h2 * 1.16;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: @white;
+            font-size: 16px;
+        }
+    }
+
+    &#subscription_form {
+        padding-top: 45px;
+        width: 100%;
+        padding-bottom: 55px;
+        float: left;
+        font-size: 16px;
+
+        &.red {
+            background-color: @red;
+        }
+
+        &.green {
+            background-color: @green;
+        }
+
+        p {
+            color: @white;
+        }
+
+        input {
+            width: 242px;
+            padding: 23px 15px;
+            margin-right: 10px;
+            color: @black;
+        }
+
+        button {
+            &.subscribe {
+                color: @darkBlue;
+                background-color: transparent;
+                border: 2px solid @darkBlue;
+
+                &:hover,
+                &:focus {
+                    background-color: @darkBlue;
+                    color: @white;
+                }
+            }
+        }
+    }
+
+    &#contact_form {
+        padding-top: 45px;
+        width: 100%;
+        padding-bottom: 55px;
+        float: left;
+        font-size: 16px;
+
+        h1 {
+            font-weight: 300;
+            font-size: @font-size-h1 * 1.26;
+            margin-bottom: 50px;
+        }
+
+        input {
+            padding: 23px 15px;
+            margin-right: 10px;
+            color: @black;
+        }
+
+        i.form-control-feedback {
+            padding-top: 8px;
+        }
+
+        #loading, #alert {
+            color: @green;
+            font-size: 16px;
+            padding: 13px 20px;
+        }
+
+        button {
+            &.submit {
+                color: @green;
+                background-color: transparent;
+                border: 2px solid @green;
+
+                &:hover,
+                &:focus {
+                    background-color: @green;
+                    color: @white;
+                }
+            }
+        }
+    }
+}
+
+@import "media_queries";
