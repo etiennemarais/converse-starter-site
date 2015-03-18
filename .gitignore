@@ -2,6 +2,7 @@
 /node_modules
 .env
 .idea
+composer.lock
 /public/js/*
 /public/css/*
 /public/dist/*
