@@ -10,6 +10,7 @@ class WelcomeController extends Controller
 	 */
 	public function index()
 	{
+		// TODO Remove for production
 		return view('home');
 	}
 
@@ -25,7 +26,7 @@ class WelcomeController extends Controller
 			return $this->respondWithSuccess();
 		} catch (\Exception $e) {
 			return $this->respondWithErrors([
-				'Something went wrong, Please contact us directly info@converseapp.co',
+				'Something went wrong, Please contact us directly, info@converseapp.co',
 				$e->getMessage()
 			]);
 		}

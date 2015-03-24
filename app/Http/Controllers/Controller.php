@@ -23,12 +23,32 @@ abstract class Controller extends BaseController {
 		];
 	}
 
+	/**
+	 * @param $resource
+	 *
+	 * @return mixed
+	 */
+	public function get($resource)
+	{
+		return Converse::make()->withHeaders($this->headers)
+			->get($this->baseUrl . $resource);
+	}
+
+	/**
+	 * @param $url
+	 * @param $params
+	 *
+	 * @return mixed
+	 */
 	public function post($url, $params)
 	{
 		return Converse::make()->withHeaders($this->headers)
 			->post($this->baseUrl . $url, $params);
 	}
 
+	/**
+	 * @return Response
+	 */
 	protected function respondWithSuccess()
 	{
 		return Response::json([
@@ -37,6 +57,11 @@ abstract class Controller extends BaseController {
 		], \Illuminate\Http\Response::HTTP_OK);
 	}
 
+	/**
+	 * @param $errors
+	 *
+	 * @return Response
+	 */
 	protected function respondWithErrors($errors)
 	{
 		return Response::json([
